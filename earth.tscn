@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqei1k7iv8vxi"]
+[gd_scene load_steps=7 format=3 uid="uid://dqei1k7iv8vxi"]
 
 [ext_resource type="Script" path="res://earth.gd" id="1_2nqsj"]
 [ext_resource type="Texture2D" uid="uid://dgain2ovjxekt" path="res://earth.png" id="2_gfkgp"]
+[ext_resource type="AudioStream" uid="uid://dnjjak4xw4cx6" path="res://explosion.wav" id="3_feoqg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_16jnh"]
 radius = 36.0
@@ -45,5 +46,8 @@ shape = SubResource("CircleShape2D_injt7")
 position = Vector2(-19, -22)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_n278o")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_feoqg")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

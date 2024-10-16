@@ -25,5 +25,6 @@ func _on_area_2d_area_entered(area):
 func war_crime_happened():
 	warcrime_ratio_value += 0.2
 	get_parent().get_node("warcrime_bar").size.x = warcrime_ratio_value*1152
+	$AudioStreamPlayer.play()
 	if warcrime_ratio_value > 0.9:
 		get_tree().change_scene_to_file("res://gameover.tscn")

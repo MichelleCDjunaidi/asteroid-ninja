@@ -22,6 +22,9 @@ func _on_area_2d_mouse_entered():
 func on_death():
 	#call animation player
 	get_parent().get_parent().get_node("Earth").war_crime_happened()
+	var audioPlayer = get_parent().get_node("AudioStreamPlayer")
+	audioPlayer.stream = load("res://wrong.wav")
+	audioPlayer.play()
 	queue_free()
 	pass
 

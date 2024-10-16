@@ -21,5 +21,8 @@ func _on_area_2d_mouse_entered():
 
 func on_death():
 	#call animation player
+	var audioPlayer = get_parent().get_node("AudioStreamPlayer")
+	audioPlayer.stream = load("res://object_destroyed.wav")
+	audioPlayer.play()
 	queue_free()
 	pass
