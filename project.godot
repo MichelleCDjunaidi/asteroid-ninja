@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="asteroid ninja"
-run/main_scene="res://asteroid.tscn"
+run/main_scene="res://main_stage.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"

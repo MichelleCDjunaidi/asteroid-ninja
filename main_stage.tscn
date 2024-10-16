@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkohlxnk4rfgl"]
+
+[ext_resource type="PackedScene" uid="uid://d3nspoijhuos1" path="res://asteroid_spawner.tscn" id="1_b6n3q"]
+[ext_resource type="PackedScene" uid="uid://dqei1k7iv8vxi" path="res://earth.tscn" id="2_3kjgr"]
+
+[node name="MainStage" type="Node2D"]
+
+[node name="Spawner" parent="." instance=ExtResource("1_b6n3q")]
+
+[node name="Earth" parent="." instance=ExtResource("2_3kjgr")]
+
+[node name="warcrime_bar" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 40.0
+color = Color(0.866216, 2.11775e-06, 1.34766e-06, 1)

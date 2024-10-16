@@ -20,5 +20,6 @@ func _on_area_2d_mouse_entered():
 
 func on_death():
 	#call animation player
+	get_parent().get_parent().get_node("Earth").warcrime_ratio_value += 0.2
 	queue_free()
 	pass
