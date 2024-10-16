@@ -4,7 +4,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_n7xxk"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1638, -11, 0, 0, 0, 0, 578, -64, 0, 0, 0, 0, 314, 127, 0, 0, 0, 0, -414, 17)
+"points": PackedVector2Array(0, 0, 0, 0, 1233, 109, 0, 0, 0, 0, 1187, -40, 0, 0, 0, 0, -27, -35, 0, 0, 0, 0, -59, 80)
 }
 point_count = 4
 
@@ -13,7 +13,7 @@ curve = SubResource("Curve2D_n7xxk")
 script = ExtResource("1_bga5s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(381.796, 77.951)
+position = Vector2(39.4464, -35.2737)
 rotation = 2.51528
 progress = 1303.49
 rotates = false
@@ -21,4 +21,9 @@ rotates = false
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

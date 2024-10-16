@@ -1,5 +1,5 @@
 extends Node2D
-var speed = 150
+var speed = 400
 var fall_dir = Vector2(0, 1)
 
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position += speed*delta*fall_dir
+	rotation += speed*delta*0.01
 	pass
 
 func _on_area_2d_mouse_entered():

@@ -12,6 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position += speed*delta*fall_dir
+	rotation += speed*delta*0.01
 	pass
 
 func _on_area_2d_mouse_entered():
@@ -20,6 +21,11 @@ func _on_area_2d_mouse_entered():
 
 func on_death():
 	#call animation player
-	get_parent().get_parent().get_node("Earth").warcrime_ratio_value += 0.2
+	get_parent().get_parent().get_node("Earth").war_crime_happened()
+	queue_free()
+	pass
+
+func on_life():
+	print("life")
 	queue_free()
 	pass

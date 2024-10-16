@@ -1,20 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://i77vbawjmh7c"]
 
-[ext_resource type="Texture2D" uid="uid://ci6a063ahnn0b" path="res://icon.svg" id="1_n3a3a"]
 [ext_resource type="Script" path="res://asteroid.gd" id="1_roaoh"]
+[ext_resource type="Texture2D" uid="uid://dc0f0mo5w11us" path="res://asteroid.png" id="2_6avy5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcpdc"]
-size = Vector2(128, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_xt8kp"]
+radius = 59.0085
 
-[node name="Asteroid" type="Node2D"]
+[node name="Asteroid" type="Node2D" groups=["asteroids"]]
 script = ExtResource("1_roaoh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_n3a3a")
+scale = Vector2(4, 4)
+texture = ExtResource("2_6avy5")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_bcpdc")
+shape = SubResource("CircleShape2D_xt8kp")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

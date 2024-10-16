@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkohlxnk4rfgl"]
+[gd_scene load_steps=5 format=3 uid="uid://dkohlxnk4rfgl"]
 
+[ext_resource type="Texture2D" uid="uid://c6ulyob14tbql" path="res://space.png" id="1_0kygh"]
 [ext_resource type="PackedScene" uid="uid://d3nspoijhuos1" path="res://asteroid_spawner.tscn" id="1_b6n3q"]
 [ext_resource type="PackedScene" uid="uid://dqei1k7iv8vxi" path="res://earth.tscn" id="2_3kjgr"]
+[ext_resource type="Texture2D" uid="uid://dto8t3rqucdn8" path="res://warcrimes.png" id="4_ua1oh"]
 
 [node name="MainStage" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(4, 4)
+texture = ExtResource("1_0kygh")
 
 [node name="Spawner" parent="." instance=ExtResource("1_b6n3q")]
 
@@ -13,3 +20,8 @@
 offset_right = 1151.0
 offset_bottom = 40.0
 color = Color(0.866216, 2.11775e-06, 1.34766e-06, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(575, 322)
+scale = Vector2(4, 4)
+texture = ExtResource("4_ua1oh")

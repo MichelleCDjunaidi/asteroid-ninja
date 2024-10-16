@@ -1,19 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqei1k7iv8vxi"]
+[gd_scene load_steps=6 format=3 uid="uid://dqei1k7iv8vxi"]
 
 [ext_resource type="Script" path="res://earth.gd" id="1_2nqsj"]
+[ext_resource type="Texture2D" uid="uid://dgain2ovjxekt" path="res://earth.png" id="2_gfkgp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_16jnh"]
-radius = 190.0
-height = 830.0
+radius = 36.0
+height = 592.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_injt7"]
+radius = 23.0217
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n278o"]
+radius = 20.0
+height = 352.0
 
 [node name="Earth" type="Node2D"]
+position = Vector2(618, 583)
 script = ExtResource("1_2nqsj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_gfkgp")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(611, 676)
+position = Vector2(-16, 26)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_16jnh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-327, 40)
+shape = SubResource("CircleShape2D_injt7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(297, 41)
+shape = SubResource("CircleShape2D_injt7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(297, 41)
+shape = SubResource("CircleShape2D_injt7")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-19, -22)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_n278o")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
