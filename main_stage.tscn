@@ -1,16 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkohlxnk4rfgl"]
 
-[ext_resource type="Texture2D" uid="uid://c6ulyob14tbql" path="res://space.png" id="1_0kygh"]
 [ext_resource type="PackedScene" uid="uid://d3nspoijhuos1" path="res://asteroid_spawner.tscn" id="1_b6n3q"]
+[ext_resource type="Texture2D" uid="uid://lgtivo0xvwom" path="res://galaxy background.png" id="1_i55b4"]
 [ext_resource type="PackedScene" uid="uid://dqei1k7iv8vxi" path="res://earth.tscn" id="2_3kjgr"]
 [ext_resource type="Texture2D" uid="uid://dto8t3rqucdn8" path="res://warcrimes.png" id="4_ua1oh"]
 
 [node name="MainStage" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(4, 4)
-texture = ExtResource("1_0kygh")
+position = Vector2(579, 333)
+texture = ExtResource("1_i55b4")
 
 [node name="Spawner" parent="." instance=ExtResource("1_b6n3q")]
 
